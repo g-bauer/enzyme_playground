@@ -4,14 +4,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-num-dual = "0.9.1"
+approx = "0.5.1"
+ndarray = { version = "0.16.1", features = ["approx"] }
+num-dual = { version = "0.9.1", features = ["ndarray"] }
 
 [profile.release]
 lto = "fat"
 
 [dev-dependencies]
-criterion = "0.5.1"
-
-[[bench]]
-name = "benches"
-harness = false
+approx = "0.5.1"
