@@ -8,6 +8,9 @@ approx = "0.5.1"
 ndarray = { version = "0.16.1", features = ["approx"] }
 num-dual = { version = "0.9.1", features = ["ndarray"] }
 
+[profile.dev]
+lto = "fat"
+
 [profile.release]
 lto = "fat"
 
